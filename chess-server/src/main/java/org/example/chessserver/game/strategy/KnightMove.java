@@ -3,6 +3,7 @@ package org.example.chessserver.game.strategy;
 import org.example.chessserver.game.Board;
 import org.example.chessserver.game.Move;
 import org.example.chessserver.game.Piece;
+import org.example.chessserver.game.util.MoveUtils;
 
 public class KnightMove implements MoveStrategy {
     @Override
@@ -10,8 +11,8 @@ public class KnightMove implements MoveStrategy {
         Piece piece = board.getPiece(move.getFrom());
         if (piece == null) return false;
 
-        int dx = Math.abs(move.getTo().getX() - move.getFrom().getX());
-        int dy = Math.abs(move.getTo().getY() - move.getFrom().getY());
+        int dx = MoveUtils.dx(move);
+        int dy = MoveUtils.dy(move);
 
         // chỉ hợp lệ khi (2,1) hoặc (1,2)
         if (!((dx == 2 && dy == 1) || (dx == 1 && dy == 2))) {

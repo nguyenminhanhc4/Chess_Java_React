@@ -3,6 +3,7 @@ package org.example.chessserver.game.strategy;
 import org.example.chessserver.game.Board;
 import org.example.chessserver.game.Move;
 import org.example.chessserver.game.Piece;
+import org.example.chessserver.game.util.MoveUtils;
 
 public class BishopMove implements MoveStrategy {
     @Override
@@ -10,11 +11,7 @@ public class BishopMove implements MoveStrategy {
         Piece piece = board.getPiece(move.getFrom());
         if (piece == null) return false;
 
-        int dx = Math.abs(move.getTo().getX() - move.getFrom().getX());
-        int dy = Math.abs(move.getTo().getY() - move.getFrom().getY());
-
-        // phải đi chéo: |dx| == |dy|
-        if (dx != dy) return false;
+        if (!MoveUtils.isDiagonal(move)) return false;
 
         // đường đi phải trống (trừ ô đích)
         if (!board.isPathClear(move.getFrom(), move.getTo())) return false;
