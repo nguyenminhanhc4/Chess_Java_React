@@ -1,5 +1,7 @@
 package org.example.chessserver.game;
 
+import org.example.chessserver.game.piece.Bishop;
+import org.example.chessserver.game.piece.Pawn;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

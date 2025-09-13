@@ -1,5 +1,6 @@
-package org.example.chessserver.game;
+package org.example.chessserver.game.piece;
 
+import org.example.chessserver.game.Piece;
 import org.example.chessserver.game.strategy.PawnMove;
 
 public class Pawn extends Piece {

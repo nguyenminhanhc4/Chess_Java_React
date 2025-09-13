@@ -1,5 +1,6 @@
-package org.example.chessserver.game;
+package org.example.chessserver.game.piece;
 
+import org.example.chessserver.game.Piece;
 import org.example.chessserver.game.strategy.BishopMove;
 
 public class Bishop extends Piece {
