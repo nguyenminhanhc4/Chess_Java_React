@@ -15,7 +15,7 @@ public class QueenMove implements MoveStrategy {
         if (!(MoveUtils.isDiagonal(move) || MoveUtils.isStraight(move))) return false;
 
         // Đường đi phải trống
-        if (!board.isPathClear(move.getFrom(), move.getTo())) return false;
+        if (board.isPathClear(move.getFrom(), move.getTo())) return false;
 
         // Đích trống hoặc có quân đối thủ
         return board.isEmpty(move.getTo()) ||

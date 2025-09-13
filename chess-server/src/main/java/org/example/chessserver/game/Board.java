@@ -1,7 +1,7 @@
 package org.example.chessserver.game;
 
 public class Board {
-    private Piece[][] grid = new Piece[8][8]; // 8x8
+    private final Piece[][] grid = new Piece[8][8]; // 8x8
 
     public Piece getPiece(Position pos) {
         return grid[pos.getY()][pos.getX()];
@@ -29,11 +29,11 @@ public class Board {
         int y = from.getY() + dy;
 
         while (x != to.getX() || y != to.getY()) {
-            if (grid[y][x] != null) return false;
+            if (grid[y][x] != null) return true;
             x += dx;
             y += dy;
         }
-        return true;
+        return false;
     }
 
     /** Thực hiện 1 nước đi (giả định hợp lệ) */

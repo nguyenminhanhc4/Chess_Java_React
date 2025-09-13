@@ -14,7 +14,7 @@ public class BishopMove implements MoveStrategy {
         if (!MoveUtils.isDiagonal(move)) return false;
 
         // đường đi phải trống (trừ ô đích)
-        if (!board.isPathClear(move.getFrom(), move.getTo())) return false;
+        if (board.isPathClear(move.getFrom(), move.getTo())) return false;
 
         // ô đích trống
         if (board.isEmpty(move.getTo())) return true;

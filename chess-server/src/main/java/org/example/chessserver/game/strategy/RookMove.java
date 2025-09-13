@@ -15,7 +15,7 @@ public class RookMove implements MoveStrategy {
         if (!MoveUtils.isStraight(move)) return false;
 
         // Kiểm tra đường đi
-        if (!board.isPathClear(move.getFrom(), move.getTo())) return false;
+        if (board.isPathClear(move.getFrom(), move.getTo())) return false;
 
         // Đích trống hoặc có quân đối thủ
         return board.isEmpty(move.getTo()) ||
