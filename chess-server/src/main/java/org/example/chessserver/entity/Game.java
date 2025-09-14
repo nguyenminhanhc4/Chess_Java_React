@@ -41,4 +41,84 @@ public class Game {
     private List<ChatMessage> chatMessages;
 
     // Getters & Setters
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public User getPlayerWhite() {
+        return playerWhite;
+    }
+
+    public void setPlayerWhite(User playerWhite) {
+        this.playerWhite = playerWhite;
+    }
+
+    public User getPlayerBlack() {
+        return playerBlack;
+    }
+
+    public void setPlayerBlack(User playerBlack) {
+        this.playerBlack = playerBlack;
+    }
+
+    public GameState getState() {
+        return state;
+    }
+
+    public void setState(GameState state) {
+        this.state = state;
+    }
+
+    public GameResult getResult() {
+        return result;
+    }
+
+    public void setResult(GameResult result) {
+        this.result = result;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalDateTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalDateTime endTime) {
+        this.endTime = endTime;
+    }
+
+    public TimeMode getTimeMode() {
+        return timeMode;
+    }
+
+    public void setTimeMode(TimeMode timeMode) {
+        this.timeMode = timeMode;
+    }
+
+    public List<MoveHistory> getMoveHistories() {
+        return moveHistories;
+    }
+
+    public void setMoveHistories(List<MoveHistory> moveHistories) {
+        this.moveHistories = moveHistories;
+    }
+
+    public List<ChatMessage> getChatMessages() {
+        return chatMessages;
+    }
+
+    public void setChatMessages(List<ChatMessage> chatMessages) {
+        this.chatMessages = chatMessages;
+    }
 }

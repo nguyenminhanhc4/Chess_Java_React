@@ -30,8 +30,13 @@ public class Ranking {
         lastUpdated = LocalDateTime.now();
     }
 
-    // Getters & Setters
+    public Ranking(User player, RankingType type, Integer score) {
+        this.player = player;
+        this.type = type;
+        this.score = score;
+    }
 
+    // Getters & Setters
     public Integer getId() {
         return id;
     }
