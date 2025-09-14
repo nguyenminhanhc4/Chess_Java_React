@@ -1,4 +1,5 @@
 package org.example.chessserver.game.observer;
 
-public class GameObserver {
+public interface GameObserver {
+    void onGameEvent(GameEvent event);
 }

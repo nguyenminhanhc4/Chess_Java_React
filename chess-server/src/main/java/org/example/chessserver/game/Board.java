@@ -1,7 +1,7 @@
 package org.example.chessserver.game;
 
 public class Board {
-    private final Piece[][] grid = new Piece[8][8]; // 8x8
+    private Piece[][] grid = new Piece[8][8]; // 8x8
 
     public Piece getPiece(Position pos) {
         return grid[pos.getY()][pos.getX()];
@@ -13,6 +13,15 @@ public class Board {
 
     public boolean isEmpty(Position pos) {
         return getPiece(pos) == null;
+    }
+
+    public Board(Board other) {
+        this.grid = new Piece[8][8];
+        for (int y = 0; y < 8; y++) {
+            for (int x = 0; x < 8; x++) {
+                this.grid[y][x] = other.grid[y][x]; // shallow copy
+            }
+        }
     }
 
     public boolean hasOpponentPiece(Position pos, boolean isWhite) {
