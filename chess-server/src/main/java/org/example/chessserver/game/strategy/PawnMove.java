@@ -5,7 +5,29 @@ import org.example.chessserver.game.Move;
 import org.example.chessserver.game.Piece;
 import org.example.chessserver.game.Position;
 
+import java.util.List;
+
 public class PawnMove implements MoveStrategy{
+    @Override
+    public Piece getPiece() {
+        return null;
+    }
+
+    @Override
+    public List<Position> getValidMoves(Board board, Position current) {
+        return null;
+    }
+
+    @Override
+    public void move(Board board, Position from, Position to) {
+
+    }
+
+    @Override
+    public void undoMove(Board board, Position from, Position to, Object captured) {
+
+    }
+
     @Override
     public boolean isValidMove(Board board, Move move) {
         // Lấy quân cờ

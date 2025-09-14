@@ -15,6 +15,10 @@ public class Board {
         return getPiece(pos) == null;
     }
 
+    public Board() {
+        this.grid = new Piece[8][8]; // tạo bàn cờ trống 8x8
+    }
+
     public Board(Board other) {
         this.grid = new Piece[8][8];
         for (int y = 0; y < 8; y++) {
